@@ -1,11 +1,12 @@
 package com.lambdaschool.javaorders;
 
+import com.lambdaschool.javaorders.models.Agents;
 import com.lambdaschool.javaorders.models.Customers;
 import com.lambdaschool.javaorders.models.Orders;
-import com.lambdaschool.javaorders.models.Agents;
 import com.lambdaschool.javaorders.repository.AgentsRepository;
 import com.lambdaschool.javaorders.repository.CustomersRepository;
 import com.lambdaschool.javaorders.repository.OrdersRepository;
+import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
@@ -13,9 +14,8 @@ import org.springframework.web.bind.annotation.*;
 import java.net.URISyntaxException;
 import java.util.List;
 import java.util.Optional;
-import java.util.Set;
-import java.util.stream.Collectors;
 
+@Api(value = "Java Orders Application", description = "Java Orders with Swagger")
 @RestController
 @RequestMapping(path = {}, produces = MediaType.APPLICATION_JSON_VALUE)
 public class OrderController {
